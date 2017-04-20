@@ -8,8 +8,6 @@ function dataHeading() {
     }
 }
 
-
-
 function skillButton(name, url) {
    name = name.replace(/[\[\]]/g, "\\$&");
    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
@@ -20,13 +18,27 @@ function skillButton(name, url) {
    return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-let changeHeadingUsingUrl = function() {
+
+let getQuery = function() {
   let link = 'http://127.0.0.1:8080/search?query=ThisIsFromQuery'
   let data = skillButton('query', link)
   $('#title-text').text(`${data}`)
   $( '#title-text' ).append( `<h6 class="subtitle is-6">from ${link}</h6>` );
 }
 
+
+$('#meals').click(function () {
+  var meals = ["Rendang", "Peanut Butter", "Noddles", "Curry", "Fried Rice"]
+
+  window.localStorage.setItem('meals', meals)
+})
+
+$('#meal-button').click(function () {
+  var meal = window.localStorage.meals.split(","),
+      length = meal.length
+
+  $('#title-text').text('You Choose : ' + meal[~~(Math.random() * length)])
+})
 
 $('#skill').click(function () {
   $('#skill').addClass("is-active").siblings().removeClass( "is-active" );
