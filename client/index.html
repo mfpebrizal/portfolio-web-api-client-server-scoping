@@ -20,7 +20,7 @@
         <div class="container">
           <div class="nav-center">
             <a id="home" class="nav-item is-tab is-hidden-mobile is-active">Home</a>
-            <a id="skills" class="nav-item is-tab is-hidden-mobile">Skills</a>
+            <a id="skill" class="nav-item is-tab is-hidden-mobile">Skills</a>
             <a id="meals" class="nav-item is-tab is-hidden-mobile">Meals</a>
           </div>
         </div>
@@ -32,13 +32,13 @@
         <center>
 
           <section class="section">
-            <h2 id="title-text" data="Change Data Heading" class="title is-2">This is Title</h2>
+            <h2 id="title-text" data="Change Data Heading from Attribute" class="title is-2">This is first Title appeared</h2>
           </section>
 
           <div id="main-button"class="block">
-            <button id="home-button" onclick="dataHeading()" data="Change Data Heading" class="button is-primary">Data Heading</button>
-            <button id="skill-button" onclick="dataHeading()" data="Change Data Heading" class="button is-primary">Skill Button</button>
-            <button id="meal-button" onclick="dataHeading()" data="Change Data Heading" class="button is-primary">Meals Button</button>
+            <button id="home-button"  onclick="dataHeading()" class="button is-primary">Data Heading</button>
+            <button id="skill-button" style="display:none" onclick="changeHeadingUsingUrl()" class="button is-primary">Skill Button</button>
+            <button id="meal-button" style="display:none" onclick="dataHeading()"  class="button is-primary">Meals Button</button>
           </div>
         </center>
       </div>
