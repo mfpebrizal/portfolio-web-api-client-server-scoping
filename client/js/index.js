@@ -18,7 +18,6 @@ function skillButton(name, url) {
    return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-
 let getQuery = function() {
   let link = 'http://127.0.0.1:8080/search?query=ThisIsFromQuery'
   let data = skillButton('query', link)
