@@ -1,7 +1,7 @@
 function dataHeading() {
 
     if ($("#title-text").html() == "This is first Title appeared") {
-      let string = $("#title-text").attr("data")
+      let string = $("#home-button").attr("data")
       $("#title-text").html(string)
     }else{
       $("#title-text").html("This is first Title appeared")
